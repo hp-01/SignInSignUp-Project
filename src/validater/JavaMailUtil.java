@@ -16,7 +16,6 @@ import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
-import org.apache.commons.mail.util.MimeMessageParser;
 
 /**
  *
@@ -64,11 +63,4 @@ public class JavaMailUtil {
         }
         return null;
     }
-    
-    public static String readHtmlContent(MimeMessage message) throws Exception {
-    return new MimeMessageParser(message).parse().getHtmlContent();
-}
-public static String readPlainContent(MimeMessage message) throws Exception {
-    return new MimeMessageParser(message).parse().getPlainContent();
-}
 }
